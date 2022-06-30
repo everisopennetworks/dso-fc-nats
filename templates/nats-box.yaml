@@ -12,7 +12,7 @@ metadata:
     {{- tpl (toYaml .Values.natsbox.additionalLabels) $ | nindent 4 }}
     {{- end }}
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: {{ include "nats.fullname" . }}-box
